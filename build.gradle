@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'fr.guylaine.Main'
+        )
+    }
+}
+
+group 'fr.guylaine'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+//    compileOnly("com.github.javafaker:javafaker:1.0.2")
+
+}
+
+test {
+    useJUnitPlatform()
+}
