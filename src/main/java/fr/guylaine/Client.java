@@ -43,6 +43,10 @@ public class Client {
 				String messageToSend = scanner.nextLine();
 				String messageReverse = reverse(messageToSend);
 				bufferedWriter.write(username + " : " + messageToSend.length() + " " + messageReverse);
+				if (messageToSend.length() > 255){
+					System.out.println("The message length is more than 255 characters.");
+					//continue;
+				}
 				bufferedWriter.newLine();
 				bufferedWriter.flush();
 			}
