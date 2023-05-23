@@ -36,10 +36,5 @@ public class Server {
 			e.printStackTrace();
 		}
 	}
-	public static void main(String args[]) throws IOException {
-		// the server port is passed as parameter
-		ServerSocket serverSocket = new ServerSocket(Integer.parseInt(args[0]));
-		Server server = new Server(serverSocket);
-		server.startServer();
-	}
+
 }

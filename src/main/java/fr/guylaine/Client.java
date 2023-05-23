@@ -84,15 +84,6 @@ public class Client {
 			e.printStackTrace();
 		}
 	}
-	public static void main(String args[]) throws UnknownHostException, IOException {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter your username for the group chat: ");
-		String username = scanner.nextLine();
-		Socket socket = new Socket("localhost", Integer.parseInt(args[0]));
-		Client client = new Client(socket, username);
-		client.listenForMessage();
-		client.sendMessage();
-		scanner.close();
-	}
+
 
 }
