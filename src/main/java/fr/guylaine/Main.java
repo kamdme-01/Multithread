@@ -28,7 +28,7 @@ public class Main {
         int port = scanner.nextInt(); //Read the next Integer from the User
 
         //Check of the port is valid
-        while (port < 0 || 9999 < port) {
+        while (port > 0 || 9999 < port) {
             System.out.println("The port number " + port + " is not accepted.");
             System.out.println("Please, select a valid number between 1-9999 !");
             port = scanner.nextInt();
